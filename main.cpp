@@ -63,7 +63,7 @@ void insertOnPosition(int pos, int value, Node *head) {
 void deleteFirst(Node *head) {
 	Node *temp = head;
 	head = head->next;
-	delete[] temp;
+	delete temp;
 }
 
 void deleteLast(Node *head, Node *tail) {
@@ -76,7 +76,7 @@ void deleteLast(Node *head, Node *tail) {
 	}
 	tail = prev;
 	tail->next = NULL;
-	delete[] cur;
+	delete cur;
 }
 
 void deleteOnPos(int pos, Node *head) {
@@ -88,7 +88,7 @@ void deleteOnPos(int pos, Node *head) {
 		cur = cur->next;
 	}
 	prev->next = cur->next;
-	delete[] cur;
+	delete cur;
 }
 
 bool searchX(int x, Node *head) {
@@ -133,9 +133,9 @@ int main()
 	
 
 	cout << endl;
-	delete[] head;
-	delete[] second;
-	delete[] third;
+	delete head;
+	delete second;
+	delete third;
 	system("pause");
 	return 0;
 }
